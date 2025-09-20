@@ -1,0 +1,30 @@
+class thsdemo {
+    int num = 3;  
+
+    public void set() {
+        num++;
+    }
+
+    public void get() {
+        System.out.println(num);
+    }
+
+    public static void main(String[] args) {
+        thsdemo ob1 = new thsdemo();
+        thsdemo ob2 = new thsdemo();
+        thsdemo ob3 = new thsdemo();
+
+        ob1.set();  // num = 4
+        ob1.set();  // num = 5
+
+        ob2.set();  // num = 4
+
+        ob3.set();  // num = 4
+        ob3.set();  // num = 5
+        ob3.set();  // num = 6
+
+        ob1.get();  // prints 5
+        ob2.get();  // prints 4
+        ob3.get();  // prints 6
+    }
+}
