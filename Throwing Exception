@@ -1,0 +1,19 @@
+package OOPS_JAVA_COLLEGE;
+
+class own {
+    public void validate(int n) throws Exception {
+        if (n >= 1 && n <= 10) {
+            System.out.println(n + " is a valid value");
+        } else {
+            throw new Exception(n + " is not a valid value");
+        }
+    }
+    public static void main(String[] args) {
+        own obj = new own();
+        try {
+            obj.validate(85);
+        } catch (Exception e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+    }
+}
