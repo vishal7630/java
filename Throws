@@ -1,0 +1,22 @@
+import java.io.*;
+class demo {
+    public static void main (String[] args) {//throws IOException {
+        try {
+            InputStreamReader in = new InputStreamReader(System.in);
+            BufferedReader br = new BufferedReader(in);
+            int a, b, c;
+            System.out.println("Enter first number");
+            a = Integer.parseInt(br.readLine());
+            System.out.println("Enter 2nd number");
+            b = Integer.parseInt(br.readLine());
+            c = a + b;
+            System.out.println("Sum = " + c);
+        }
+        catch (IOException e) {
+            System.out.println("Input/Output error occurred: " + e.getMessage());
+        }
+        catch (NumberFormatException e) {
+            System.out.println("Invalid number format! Please enter integers only.");
+        }
+    }
+}
